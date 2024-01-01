@@ -1,0 +1,26 @@
+{% extends 'layouts/public.html' %}
+
+{% block content %}
+<div class="flex hv100 wp100 justifyCenter alignStartCenter paddingLarge borderBox columnFlex aos-init" data-aos="fade-up"">
+    <div class="flex rowFlexColumn">
+        <div class="flex columnFlex">
+            <div class="flex rowFlexColumn alignCenter gapLarge aos-init" data-aos="fade-up"">
+                <img src="{{ url_for('static', filename='transicon.svg') }}" height="92px">
+                <div class="flex columnFlex alignStartCenter">
+                    
+                    <h1>Furlibre</h1>
+                    <h3 class="successColor">STUDiO</h3>
+                </div>
+            </div>
+            <span class="spc32"></span>
+            <h1>Humilde em escala,</h1>
+            <h1 class="successColor">gigante em potencial criativo.</h1>
+        </div>
+        
+    </div>
+    <p></p>
+    <p><strong>Em breve</strong><br>Estúdio de jogos eletrônicos - Por <a href="https://x.com/SamMahonri" target="_blank">@SamMahonri</a> e contribuidores</p>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,155 @@
+@import url("properties.css");
+
+h1{ font-size: var(--h1-text-size); }
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    font-family: var(--font-family-primary);
+}
+
+p{
+    font-family: var(--font-family-secondary);
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    color: var(--current-text-color);
+}
+
+body{
+    margin: 0;
+    background-color: var(--current-back-color);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    max-width: 1280px;
+    width: 100%;
+}
+
+.successColor{
+    color: var(--success-color) !important;
+}
+
+.hv100{
+    min-height: 100vh;
+    height: fit-content;
+}
+
+.wp100{
+    width: 100%;
+}
+
+.flex{
+    display: flex;
+}
+
+.alignCenter,
+.alignCenterStart{
+    align-items: center;
+}
+
+.alignStart,
+.alignStartCenter{
+    align-items: start;
+}
+
+.justifyCenter{
+    justify-content: center;
+}
+
+.centerFlex{
+    align-items: center;
+    justify-content: center;
+}
+
+.columnFlex, 
+.cloumnFlexRow{
+    flex-direction: column;
+}
+
+.rowFlex, 
+.rowFlexColumn{
+    flex-direction: row;
+}
+
+.paddingMedium{
+    padding: var(--padding-medium);
+}
+
+.paddingLarge{
+    padding: var(--padding-large);
+}
+
+.gapLarge{
+    gap: var(--gap-large);
+}
+
+.borderBox{
+    box-sizing: border-box;
+}
+
+.selfAlignStart{
+    align-self: flex-start;
+}
+
+.spc32{
+    height: 32px;
+}
+
+.overflowHiddenVisible{
+    overflow: hidden;
+}
+
+.aos-init{
+    transition-duration: 1s;
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.aos-animate {
+    
+    transition-duration: 1s;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to bottom, transparent,var(--theme-color) ,transparent);
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    background-image: linear-gradient(to right, transparent,var(--theme-color) ,transparent);
+}
+
+@media only screen and (max-width: 700px){
+    .cloumnFlexRow{
+        flex-direction: row;
+    }
+
+    .rowFlexColumn{
+        flex-direction: column;
+    }
+
+    .alignCenterStart{
+        align-items: start;
+    }
+    .alignStartCenter{
+        align-items: center;
+    }
+    .overflowHiddenVisible{
+        overflow: visible;
+    }
+}

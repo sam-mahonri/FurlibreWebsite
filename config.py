@@ -35,4 +35,8 @@ class Config:
     JWT_COOKIE_HTTPONLY = True
     JWT_CSRF_CHECK_FORM = True
     JWT_COOKIE_CSRF_PROTECT = False
+    
+    BABEL_DEFAULT_LOCALE = 'en'
+    LANGUAGES = ['en', 'es', 'pt_BR']
+    BABEL_DOMAINS = ['buttons', 'errors']
 
