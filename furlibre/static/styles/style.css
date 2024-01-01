@@ -11,6 +11,14 @@ p{
     font-family: var(--font-family-secondary);
 }
 
+a{
+    color: var(--current-text-color);
+    text-decoration: none;
+    opacity: 0.7;
+}a:hover{
+    opacity: 1;
+}
+
 h1, h2, h3, h4, h5, h6, p{
     color: var(--current-text-color);
 }
