@@ -1,6 +1,9 @@
 @import url("properties.css");
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
 
 h1{ font-size: var(--h1-text-size); }
+
+h2{ font-size: var(--h2-text-size); }
 
 h1, h2, h3, h4, h5, h6{
     margin: 0;
@@ -8,15 +11,17 @@ h1, h2, h3, h4, h5, h6{
 }
 
 p{
+    font-size: var(--p-text-size);
     font-family: var(--font-family-secondary);
 }
 
 a{
+    transition-duration: var(--transition-duration);
     color: var(--current-text-color);
     text-decoration: none;
-    opacity: 0.7;
-}a:hover{
     opacity: 1;
+}a:hover{
+    opacity: 0.7;
 }
 
 h1, h2, h3, h4, h5, h6, p{
@@ -40,6 +45,37 @@ section{
     width: 100%;
 }
 
+nav{
+    z-index: 100;
+    height: 72px;
+    max-height: 72px;
+    background-color: var(--sec-dark);
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+nav > *{
+    color: var(--light-color) !important;
+}
+
+.navComp{
+    height: 72px;
+}
+
+.onlyMobile{
+    visibility: collapse;
+}
+
+.hideElement{
+    visibility: collapse;
+}
+
 .successColor{
     color: var(--success-color) !important;
 }
@@ -57,6 +93,10 @@ section{
     display: flex;
 }
 
+.textLeftCenter{
+    text-align: left;
+}
+
 .alignCenter,
 .alignCenterStart{
     align-items: center;
@@ -69,6 +109,14 @@ section{
 
 .justifyCenter{
     justify-content: center;
+}
+
+.justifyCenterSelf{
+    justify-self: center;
+}
+
+.alignCenterSelf{
+    align-self: center;
 }
 
 .centerFlex{
@@ -96,6 +144,10 @@ section{
 
 .gapLarge{
     gap: var(--gap-large);
+}
+
+.gapMedium{
+    gap: var(--gap-medium);
 }
 
 .borderBox{
@@ -128,6 +180,20 @@ section{
     transform: translateY(0);
 }
 
+.boxFurlibre {
+    border: solid 4px var(--theme-color);
+    width: 100%;
+    max-width: 300px;
+    max-height: 300px;
+    aspect-ratio: 1/1;
+    
+}
+
+
+.flexExpand{
+    flex: 1;
+}
+
 ::-webkit-scrollbar {
     width: 4px;
     height: 4px;
@@ -143,6 +209,10 @@ section{
 }
 
 @media only screen and (max-width: 700px){
+    .onlyMobile{
+        visibility: visible;
+    }
+
     .cloumnFlexRow{
         flex-direction: row;
     }
@@ -160,4 +230,17 @@ section{
     .overflowHiddenVisible{
         overflow: visible;
     }
+
+    h1{ font-size: var(--mob-h1-text-size); }
+
+    h2{ font-size: var(--mob-h2-text-size); }
+
+    p{
+        font-size: var(--mob-p-text-size);
+    }
+
+    .textLeftCenter{
+        text-align: center;
+    }
+
 }

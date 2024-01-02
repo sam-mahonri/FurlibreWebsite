@@ -13,11 +13,16 @@
 </head>
 <body>
 
+    
     {% block navbar %}
         {% include 'components/navbar.html' %}
     {% endblock %}
 
+    
     <main>
+        <div class="navComp onlyMobile">
+
+        </div>
         <section>
             {% block content %}
             {% endblock %}

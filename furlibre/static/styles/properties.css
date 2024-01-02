@@ -16,9 +16,12 @@
 
     /* Tamanhos de Texto */
     --p-text-size: 12pt;
+    --mob-p-text-size: 11pt;
     --h1-text-size: 32pt;
-    --h2-text-size: 22pt;
-    --primary-bt-text-size: 10pt;
+    --mob-h1-text-size: 26pt;
+    --h2-text-size: 16pt;
+    --mob-h2-text-size: 12pt;
+    --primary-bt-text-size: 11pt;
 
     /* Fontes */
     --font-family-primary: 'Unbounded', sans-serif;
@@ -39,8 +42,12 @@
     --gap-large: 24px;
 
     /* Outras Propriedades */
-    --border-radius: 8px;
+    --border-radius: 16px;
     --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    --sec-dark: rgb(45, 44, 58);
+
+    --transition-duration: 0.3s;
 }
 
 /* Modo Claro (Exceção) */
