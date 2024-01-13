@@ -1,13 +1,19 @@
-<nav>
-    <section class="flex rowFlexColumn alignCenter paddingLarge borderBox">
+<nav class="borderBox">
+    <section class="flex rowFlex alignCenter paddingLarge borderBox gapLarge">
         <a href="/">
             <div class="flex alignCenter rowFlex gapMedium">
                 
-                    <img src="{{ url_for('static', filename='transicon.svg') }}" height="32px">
+                    <img src="{{ url_for('static', filename='favicon.svg') }}" height="32px">
                     <h3>Furlibre</h3>
                 
                 
             </div>
         </a>
+        <span class="flexExpand"></span>
+
+        <a href="#" class="aT">Sobre</a>
+        <button id="themeBtn" class="selectorButton themeSelector">
+            <i id="themeIcon" class="fas fa-adjust"></i>
+        </button>
     </section>
 </nav>

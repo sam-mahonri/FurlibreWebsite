@@ -1,5 +1,10 @@
 @import url("properties.css");
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+@import url("custom.css");
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
+*{
+    transition-duration: var(--transition-duration);
+}
 
 h1{ font-size: var(--h1-text-size); }
 
@@ -10,18 +15,65 @@ h1, h2, h3, h4, h5, h6{
     font-family: var(--font-family-primary);
 }
 
-p{
+p, a{
     font-size: var(--p-text-size);
     font-family: var(--font-family-secondary);
 }
 
+button{
+    cursor: pointer;
+    transition-duration: var(--transition-duration);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-small);
+    font-size: var(--primary-bt-text-size);
+    font-family: var(--font-family-primary);
+    font-weight: 600;
+}button i{
+    transition-duration: var(--transition-duration);
+    font-size: var(--p-text-size);
+}
+
 a{
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-small);
     transition-duration: var(--transition-duration);
     color: var(--current-text-color);
     text-decoration: none;
-    opacity: 1;
-}a:hover{
+}
+
+
+.a{
     opacity: 0.7;
+    transition: opacity var(--transition-duration) ease-in-out;
+}.a:hover{
+    opacity: 1;
+}
+
+.aT{
+    padding: 4px 0px 4px 0px;
+    opacity: 0.8;
+    font-weight: 600;
+    font-size: var(--primary-bt-text-size);
+    font-family: var(--font-family-primary) !important;
+    background-image: linear-gradient(var(--theme-color), var(--theme-color));
+    background-size: 0% 0.2em;
+    background-position-y: 100%;
+    background-position-x: 100%;
+    background-repeat: no-repeat;
+    transition: background-size var(--transition-duration) ease-in-out, opacity var(--transition-duration) ease-in-out;
+}
+
+.aT:hover,
+.aT:focus,
+.aT:active {
+    background-size: 100% 0.2em;
+    background-position-x: 0%;
+    opacity: 1;
 }
 
 h1, h2, h3, h4, h5, h6, p{
@@ -58,11 +110,14 @@ nav{
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    backdrop-filter: blur(8px);
 }
 
-nav > *{
+/*
+nav *{
     color: var(--light-color) !important;
 }
+*/
 
 .navComp{
     height: 72px;
@@ -70,14 +125,20 @@ nav > *{
 
 .onlyMobile{
     visibility: collapse;
+    display: none !important;
 }
 
 .hideElement{
     visibility: collapse;
+    display: none !important;
 }
 
 .successColor{
     color: var(--success-color) !important;
+}
+
+.errorColor{
+    color: var(--error-color) !important;
 }
 
 .hv100{
@@ -93,8 +154,46 @@ nav > *{
     display: flex;
 }
 
+.plainButton i,
+.selectorButton i{
+    color: var(--current-text-color);
+}
+
+.backFixed{
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.selectorButton{
+    padding: 16px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    background-color: transparent;
+    border: none;
+    height: 48px;
+}.selectorButton:hover{
+    background-color: var(--neutral-color);
+}
+
+.plainButton{
+    border-radius: var(--border-radius);
+    
+    padding: var(--padding-button);
+    background-color: transparent;
+    border: none;
+}.plainButton:hover{
+    background-color: var(--neutral-color);
+}
+
+.textLeft,
 .textLeftCenter{
     text-align: left;
+}
+
+.textCenter{
+    text-align: center;
 }
 
 .alignCenter,
@@ -146,10 +245,17 @@ nav > *{
     gap: var(--gap-large);
 }
 
+.gapXLarge{
+    gap: var(--gap-x-large)
+}
+
 .gapMedium{
     gap: var(--gap-medium);
 }
 
+.gapSmall{
+    gap: var(--gap-small);
+}
 .borderBox{
     box-sizing: border-box;
 }
@@ -160,6 +266,10 @@ nav > *{
 
 .spc32{
     height: 32px;
+}
+
+.flexGrid{
+    flex-wrap: wrap;
 }
 
 .overflowHiddenVisible{
@@ -180,14 +290,17 @@ nav > *{
     transform: translateY(0);
 }
 
-.boxFurlibre {
-    border: solid 4px var(--theme-color);
-    width: 100%;
-    max-width: 300px;
-    max-height: 300px;
-    aspect-ratio: 1/1;
-    
+footer{
+    background-color: var(--sec-dark);
+    padding: var(--padding-large);
 }
+
+
+/*
+footer *{
+    color: var(--light-color) !important;
+}
+*/
 
 
 .flexExpand{
@@ -210,6 +323,7 @@ nav > *{
 
 @media only screen and (max-width: 700px){
     .onlyMobile{
+        display: flex !important;
         visibility: visible;
     }
 

@@ -1,0 +1,8 @@
+.boxFurlibre {
+    border: solid 8px var(--theme-color);
+    width: 100%;
+    max-width: 300px;
+    max-height: 300px;
+    aspect-ratio: 1/1;
+}
+

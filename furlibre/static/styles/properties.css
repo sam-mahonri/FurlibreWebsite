@@ -5,12 +5,12 @@
 :root {
     /* Cores Gerais */
     --dark-color: #252430ff;
-    --light-color: #fbf0ffec;
+    --light-color: #f5f0fcec;
     --current-back-color: var(--dark-color);
     --current-text-color: var(--light-color);
 
     /* Cores do Tema */
-    --theme-color: #2af1a1;
+    --theme-color: #29ca8a;
     --error-color: #e62169;
     --success-color: var(--theme-color);
 
@@ -21,7 +21,7 @@
     --mob-h1-text-size: 26pt;
     --h2-text-size: 16pt;
     --mob-h2-text-size: 12pt;
-    --primary-bt-text-size: 11pt;
+    --primary-bt-text-size: 10pt;
 
     /* Fontes */
     --font-family-primary: 'Unbounded', sans-serif;
@@ -31,7 +31,7 @@
     --padding-small: 8px;
     --padding-medium: 16px;
     --padding-large: 32px;
-
+    --padding-button: 18px 28px 18px 28px;
     --margin-small: 8px;
     --margin-medium: 16px;
     --margin-large: 24px;
@@ -40,19 +40,21 @@
     --gap-small: 8px;
     --gap-medium: 16px;
     --gap-large: 24px;
+    --gap-x-large: 48px;
 
     /* Outras Propriedades */
     --border-radius: 16px;
     --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
-    --sec-dark: rgb(45, 44, 58);
-
+    --sec-dark: rgba(46, 45, 60, 0.647);
+    --neutral-color: rgba(103, 97, 134, 0.245);
     --transition-duration: 0.3s;
 }
 
 /* Modo Claro (Exceção) */
 :root.light-theme {
-    --current-back-color: var(--light-color);
-    --current-text-color: var(--dark-color);
-
+    --current-back-color: #e8ddf6ec;
+    --current-text-color: rgb(76, 75, 97);
+    --sec-dark: rgba(195, 188, 226, 0.588);
+    --theme-color: #27b17a;
 }
